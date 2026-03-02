@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { 
-  ArrowLeft, 
   Search, 
   Bell, 
   User, 
@@ -13,7 +12,7 @@ import {
   FileText,
   Ship,
   Plane,
-  Clock,
+
   MapPin,
   CheckCircle2,
   AlertCircle,

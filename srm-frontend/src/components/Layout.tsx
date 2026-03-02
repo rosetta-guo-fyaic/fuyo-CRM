@@ -11,8 +11,7 @@ import {
   Crown,
   Ban,
   LifeBuoy,
-  TrendingUp,
-  TrendingDown
+  TrendingUp
 } from 'lucide-react';
 import { cn } from '../lib/utils';
 import { useNavigate, useLocation } from 'react-router-dom';

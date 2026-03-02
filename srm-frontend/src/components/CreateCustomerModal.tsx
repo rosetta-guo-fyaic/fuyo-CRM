@@ -58,8 +58,8 @@ export function CreateCustomerModal({ isOpen, onClose, onSubmit }: CreateCustome
     onSubmit({
       ...formData,
       id: `CUST-${new Date().getFullYear()}-${Math.floor(Math.random() * 1000).toString().padStart(3, '0')}`,
-      status: 'Potential',
-      totalSpend: '¥ 0',
+      status: 'Lead',
+      // totalSpend: '¥ 0', // Removed as it doesn't exist in CustomerSummary
       healthScore: 0,
       tags: formData.tags.split(/[,，]/).map(t => t.trim()).filter(Boolean),
       logoText: (formData.shortNameEn || formData.name).charAt(0).toUpperCase(),

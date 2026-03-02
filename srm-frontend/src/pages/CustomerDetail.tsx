@@ -20,7 +20,7 @@ import {
   FileText,
   CreditCard,
   Lightbulb,
-  BarChart2,
+
   Calendar,
   Users,
   Crown,
@@ -29,7 +29,7 @@ import {
   Upload,
   Check,
   X,
-  FilePlus,
+
   PenTool,
   Landmark,
   ClipboardList,

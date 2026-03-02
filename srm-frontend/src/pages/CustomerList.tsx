@@ -172,7 +172,7 @@ const AddPartnerModal = ({
 
 export function CustomerList() {
   const navigate = useNavigate();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [customersList, setCustomersList] = useState<CustomerSummary[]>(initialCustomers);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [isAddPartnerModalOpen, setIsAddPartnerModalOpen] = useState(false);
@@ -235,10 +235,6 @@ export function CustomerList() {
             <h1 className="text-xl font-bold text-slate-900 flex items-center gap-2">
               <Building2 className="w-6 h-6 text-brand-500" />
               客户名录 (Customer Directory)
-              <div className="flex items-center gap-2 px-2 py-1 bg-emerald-50 border border-emerald-100 rounded text-xs font-medium text-emerald-700">
-                <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                已同步至 PMS 下单台
-              </div>
             </h1>
             <p className="text-sm text-slate-500 mt-1">
               共找到 {filteredCustomers.length} 家 

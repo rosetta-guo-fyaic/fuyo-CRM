@@ -58,11 +58,12 @@ export function PerformanceAppraisal() {
     if (!selectedSupplier) return;
     
     const newHistoryItem = {
-      date: new Date().toISOString().split('T')[0],
+      id: `hist-${Date.now()}`,
+      period: '2024 Q2', // Placeholder
       score: totalScore,
-      period: '2024 Q1', // Demo value
-      rater: 'Current User',
-      comment: comment
+      dimensionScores: scores,
+      notes: comment,
+      createdAt: new Date().toISOString(),
     };
 
     // Update local state

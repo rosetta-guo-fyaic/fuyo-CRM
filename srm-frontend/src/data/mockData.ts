@@ -16,6 +16,24 @@ export interface Customer {
   // Extended fields for Customer Profile
   healthScore?: number; // Renamed from systemScore
   healthStatus?: string; // Custom status for Lead (e.g. '未触达', '待响应')
+  systemScore?: number; // For backward compatibility
+  performanceConfig?: {
+    dimensions: Array<{
+      id: string;
+      name: string;
+      weight: number;
+      description?: string;
+    }>;
+    evaluationPeriod: 'monthly' | 'quarterly' | 'yearly';
+  };
+  performanceHistory?: Array<{
+    id: string;
+    period: string;
+    score: number;
+    dimensionScores: Record<string, number>;
+    notes?: string;
+    createdAt: string;
+  }>;
   address?: string;
   contactPhone?: string;
   website?: string;
